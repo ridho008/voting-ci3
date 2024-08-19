@@ -5,7 +5,6 @@
       <h1><i class="fa fa-user-circle"></i> <?= $title; ?></h1>
     </div>
   </div>
-
   <div class="row">
     <div class="col-md-6">
        <?php if($this->session->flashdata('success') != null) : ?>
@@ -25,7 +24,7 @@
            <div class="card-body">
               <h3><?= $k->nama_kandidat ?></h3>
               <img src="<?= base_url('public/backend/images/kandidat/' . $k->foto_kandidat) ?>" width="200" class="img-fluid">
-              <?php if(empty($sudahMemilih)) : ?>
+              <?php if(!$sudahMemilih) : ?>
               <a href="<?= base_url('utama/pilih/' . $k->id_kandidat); ?>" class="btn btn-primary btn-block mt-3">Pilih</a>
               <?php endif; ?>
            </div>

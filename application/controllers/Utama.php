@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Utama extends CI_Controller {
 	public function index()
 	{
-		$sudahMemilih = $this->db->get_where('pilih', ['id_pemilih' => $this->session->userdata('id_pemilih')]);
+		$sudahMemilih = $this->db->get_where('pilih', ['id_pemilih' => $this->session->userdata('id_pemilih')])->row_array();
 		$data = [
 			'title' => 'Pemilihan',
 			'kandidat' => $this->db->get('kandidat')->result(),

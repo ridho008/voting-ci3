@@ -17,6 +17,8 @@
     <section class="login-content">
       <div class="logo">
         <h1>Voting CI3</h1>
+        <div class="alert alert-info"><strong>admin</strong> <br>
+        username : ridho000 <br> pass : ridho <br> <strong>petugas</strong> <br> username : petugas1 <br> pass : 123</div>
       </div>
       <div class="login-box">
           <?php 
@@ -38,6 +40,7 @@
               </div>
           </div>
           <?php endif; ?>
+          
           <div class="form-group">
             <label class="control-label">USERNAME</label>
             <input class="form-control" name="username" type="text" autocomplete="off" placeholder="Email" autofocus>
